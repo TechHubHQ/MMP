@@ -9,6 +9,7 @@ function App() {
   useEffect(() => {
     ApiHandler.get('/api/v1/test')
       .then(response => {
+        console.log("Api Response", response.data);
         setMessage(response.data.message);
       })
       .catch(error => {
