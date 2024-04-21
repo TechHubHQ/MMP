@@ -1,0 +1,8 @@
+.glow-effect {
+    box-shadow: 0 0 10px rgba(100, 149, 237, 0.3);
+    transition: box-shadow 0.3s ease-in-out;
+  }
+  
+  .glow-effect:hover {
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.8);
+  }
