@@ -1,7 +1,10 @@
-import axios from 'axios';
+import axios from 'axios'
 
-const api_handler = axios.create({
-    baseURL: 'http://localhost:8000'
+const APIHandler = axios.create({
+    baseURL: 'http://localhost:8000',
+    headers: {
+        'Content-Type': 'application/json'
+    }
 });
 
-export default api_handler;
+export default APIHandler;

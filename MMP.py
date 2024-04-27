@@ -13,7 +13,7 @@ logger.add("logs/MMP.log", rotation="1 week", retention="1 week", compression="z
 app = FastAPI()
 
 origins = [
-    "http://localhost:3000"
+    "http://localhost:5174"
 ]
 
 # Add CORS middleware
