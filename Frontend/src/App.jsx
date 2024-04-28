@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
 import React, { useEffect, useState } from 'react';
-import ApiHandler from './Lib/APIHandler';
+import APIHandler from './Lib/ApiHandler';
 import Header from './Components/Header';
 import Footer from './Components/Footer';
 
@@ -8,7 +8,7 @@ function App() {
   const [message, setMessage] = useState('');
 
   useEffect(() => {
-    ApiHandler.get('/api/v1/test')
+    APIHandler.get('/api/v1/test')
       .then(response => {
         console.log("Api Response", response.data);
         setMessage(response.data.message);
