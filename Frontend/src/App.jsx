@@ -1,8 +1,7 @@
 /* eslint-disable no-unused-vars */
 import React, { useEffect, useState } from 'react';
 import APIHandler from './Lib/ApiHandler';
-import Header from './Components/Header';
-import Footer from './Components/Footer';
+import LandingPage from './Pages/LandingPage';
 
 function App() {
   const [message, setMessage] = useState('');
@@ -20,11 +19,12 @@ function App() {
 
   return (
     <>
-      <Header />
-      <div>
-        <span>{message}</span>
-      </div>
-      <Footer />
+      <LandingPage />
+      <div className="toast">
+        <div className="alert alert-info">
+          <span>{message}</span>
+        </div>
+      </div>      
     </>
   );
 }
