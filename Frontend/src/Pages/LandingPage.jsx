@@ -8,13 +8,20 @@ function LandingPage() {
       <main>
         {/* Hero Section */}
         <div className="hero min-h-screen bg-base-200 glow">
-          <div className="hero-content text-center">
-            <div className="max-w-md">
+          <div className="hero-content flex flex-col md:flex-row">
+            <div className="text-center md:text-left">
               <h1 className="text-5xl font-bold">Capture Timeless Moments</h1>
               <p className="py-6">
                 Elevate your special occasions with our professional photography services.
               </p>
               <button className="btn btn-primary">Book Now</button>
+            </div>
+            <div className="mt-8 md:mt-0 md:ml-8">
+              <img
+                src="../../src/assets/Images/hero-image.jpg"
+                alt="Hero Image"
+                className="max-w-md rounded-lg shadow-lg"
+              />
             </div>
           </div>
         </div>
