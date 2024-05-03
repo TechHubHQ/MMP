@@ -128,29 +128,34 @@ def restart_backend():
     print("Backend restarted successfully.")
     print("----------------------------------------------------------------\n")
 
+def show_help():
+    print("----------------------------------------------------------------")
+    print("Error: Invalid number of arguments.")
+    print("Usage: ControlApp <command> <package>")
+    print("Commands:")
+    print("  --start frontend - Start the frontend")
+    print("  --start backend - Start the backend")
+    print("  --stop frontend - Stop the frontend")
+    print("  --stop backend - Stop the backend")
+    print("  --restart frontend - Restart the frontend")
+    print("  --restart backend - Restart the backend")
+    print("  --status frontend - Check frontend status")
+    print("  --status backend - Check backend status")
+    print("----------------------------------------------------------------")
+    sys.exit()
+
 
 if __name__ == '__main__':
     try:
         if len(sys.argv) < 3:
-            print("----------------------------------------------------------------")
-            print("Error: Invalid number of arguments.")
-            print("Usage: ControlApp <command> <package>")
-            print("Commands:")
-            print("  --start frontend - Start the frontend")
-            print("  --start backend - Start the backend")
-            print("  --stop frontend - Stop the frontend")
-            print("  --stop backend - Stop the backend")
-            print("  --restart frontend - Restart the frontend")
-            print("  --restart backend - Restart the backend")
-            print("  --status frontend - Check frontend status")
-            print("  --status backend - Check backend status")
-            print("----------------------------------------------------------------")
-            sys.exit()
+            show_help()
 
         command = sys.argv[1]
         package = sys.argv[2]
 
-        if command == '--start' and package == 'frontend':
+        if command == '--help':
+            show_help()
+        elif command == '--start' and package == 'frontend':
             start_frontend()
             sys.exit()
         elif command == '--start' and package == 'backend':
