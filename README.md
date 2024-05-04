@@ -12,7 +12,7 @@ command ControlApp without needing to change to CLI directory as below
 ControlApp --start all
 ```
 
-for further information about what ControlApp does be checked in usage of the script by following the below command
+for further information about what ControlApp does can be checked in usage of the script by following the below command
 
 ```bash
 ControlApp --help
