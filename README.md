@@ -2,7 +2,7 @@
 For the first time, run the below command in CLI directory
 
 ```bash
-python ControlApp.py --start all
+./ControlApp.ps1 --start all
 ```
 
 This will start the frontend and backend packages along with creating a batch file, this allows directly executing the
